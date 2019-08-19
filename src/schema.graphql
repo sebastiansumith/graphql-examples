@@ -1,0 +1,28 @@
+type Query {
+  info: String!
+  feed: [Link!]!
+  getCars: [Car]
+  getCarByPlateNumber(plateNumber: String!): Car 
+}
+
+type Mutation {
+  post(url: String!, description: String!): Link!
+}
+
+type Link {
+  id: ID!
+  description: String!
+  url: String!
+}
+
+type Car {
+  id: Int!
+  plateNumber: String!
+  color: String
+  model: String!
+  chasisNumber: String!
+  status: String!
+  productionYear: String
+  issueDate: String
+  expiryDate: String
+}
